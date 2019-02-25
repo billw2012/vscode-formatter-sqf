@@ -1,0 +1,38 @@
+{
+    "name": "sqf-formatter",
+    "displayName": "sqf-formatter",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "jrieken",
+    "engines": {
+        "vscode": "^1.6.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onLanguage:sqf"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "languages": [
+            {
+                "id": "sqf",
+                "aliases": [
+                    "SQF"
+                ],
+                "extensions": [
+                    "sqf"
+                ]
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install && tsc"
+    },
+    "devDependencies": {
+        "@types/node": "*",
+        "vscode": "1.0.3",
+        "typescript": "2.0.6"
+    }
+}
