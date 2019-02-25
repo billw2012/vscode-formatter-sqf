@@ -1,0 +1,1 @@
+# vscode-formatter-sqf
