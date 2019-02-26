@@ -4,6 +4,7 @@ The original formatter code is by [JohnDeved](https://github.com/JohnDeved), use
 
 
 In part based on code from js-beautify, under MIT license reproduced below:
+
 The MIT License (MIT)
 
 Copyright (c) 2007-2018 Einar Lielmanis, Liam Newman, and contributors.
