@@ -2,7 +2,7 @@
     "name": "sqf-formatter",
     "displayName": "sqf-formatter",
     "description": "Experimental SQF Auto Formatter.",
-    "version": "0.0.1-alpha",
+    "version": "0.0.1",
     "publisher": "billw",
     "repository": "https://github.com/billw2012/vscode-formatter-sqf",
     "engines": {
