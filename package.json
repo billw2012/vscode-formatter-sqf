@@ -1,21 +1,21 @@
 {
-    "name": "sqf-formatter",
-    "displayName": "sqf-formatter",
-    "description": "Experimental SQF Auto Formatter.",
-    "version": "0.0.1",
-    "publisher": "billw",
-    "repository": "https://github.com/billw2012/vscode-formatter-sqf",
-    "engines": {
-        "vscode": "^1.6.0"
-    },
-    "categories": [
-        "Formatters"
-    ],
-    "activationEvents": [
-        "onLanguage:sqf"
-    ],
-    "main": "./out/src/extension",
-    "contributes": {
+	"name": "sqf-formatter",
+	"displayName": "sqf-formatter",
+	"description": "Experimental SQF Auto Formatter.",
+	"version": "0.0.1",
+	"repository": "https://github.com/billw2012/vscode-formatter-sqf",
+	"publisher": "billw",
+	"engines": {
+		"vscode": "^1.31.0"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"activationEvents": [
+		"onLanguage:sqf"
+	],
+	"main": "./extension.js",
+	"contributes": {
         "languages": [
             {
                 "id": "sqf",
@@ -27,13 +27,19 @@
                 ]
             }
         ]
-    },
-    "scripts": {
-        "postinstall": "node ./node_modules/vscode/bin/install && tsc"
-    },
-    "devDependencies": {
-        "@types/node": "*",
-        "vscode": "1.0.3",
-        "typescript": "2.0.6"
-    }
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"tslint": "^5.12.1",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	}
 }
